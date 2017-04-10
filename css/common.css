@@ -1,0 +1,126 @@
+
+    /******************************************************************
+        * 功能模塊描述：创建共用于所有手机模块的样式，方便以后作业
+        * ===================================================
+        * 功能內容描述：创建共用于所有手机模块的样式
+        * 聯繫方式：Jeason_zhang888@163.com      Tel:13641638693
+        * 修改時間：
+        * ===================================================
+        *****************************************************************/
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;     	
+       }
+     /*规定多行后显示省略号的样式*/
+    .moreLine{    	
+	    width: 200px;/*根据样式调整宽度*/
+	    word-break: break-all;
+	    text-overflow: ellipsis;
+	    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+	    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+	    -webkit-line-clamp: 3; /** 显示的行数 **/
+	    overflow: hidden;  /** 隐藏超出的内容 **/    	
+    }
+   	.oneline{
+   		width: 200px;/*根据样式调整宽度*/
+	    word-break: break-all;
+   		text-overflow: ellipsis;
+   		overflow: hidden;   		
+   	}
+	.viewport {
+	        max-width:768px;
+	        margin:0 auto;
+	    }
+	@media only screen and (max-width:300px) {
+	    html {
+	        font-size:15px!important
+	    }
+	    .viewport {
+	        max-width:300px;
+	    }
+	}@media only screen and (max-width:320px) and (min-width:301px) {
+	    html {
+	        font-size:16px!important;
+	    }
+	    .viewport {
+	        max-width:320px;
+	    }
+	}@media only screen and (max-width:360px) and (min-width:321px) {
+	    html {
+	        font-size:18px!important
+	    }
+	    .viewport {
+	        max-width:360px;
+	    }
+	}@media only screen and (max-width:375px) and (min-width:361px) {
+	        .viewport {
+	            max-width:375px;
+	        }
+	        html {
+	            font-size:18.75px!important
+	        }
+	    }@media only screen and (max-width:384px) and (min-width:376px) {
+	        .viewport {
+	            max-width:384px;
+	        }
+	        html {
+	            font-size:19.2px!important
+	        }
+	    }@media only screen and (max-width:414px) and (min-width:385px) {
+	        .viewport {
+	            max-width:414px;
+	        }
+	        html {
+	            font-size:20.7px!important
+	        }
+	    }@media only screen and (max-width:480px) and (min-width:415px) {
+	        .viewport {
+	            max-width:480px;
+	        }
+	        html {
+	            font-size:24px!important
+	        }
+	    }@media only screen and (max-width:560px) and (min-width:481px) {
+	    html {
+	        font-size:28px!important
+	    }
+	    .viewport {
+	        max-width:560px;
+	    }
+	}@media only screen and (max-width:640px) and (min-width:561px) {
+	    html {
+	        font-size:32px!important
+	    }
+	    .viewport {
+	        max-width:640px
+	    }
+	}@media only screen and (max-width:768px) and (min-width:641px) {
+	    html {
+	        font-size:38.4px!important
+	    }
+	        .viewport {
+	            max-width:768px
+	        }
+	}
+	
+	    /******************************************************************
+	        * 功能模塊描述：设置服务器字体
+	        * ===================================================
+	        * 功能內容描述：设置服务器字体
+	        * 聯繫方式：Jeason_zhang888@163.com      Tel:13641638693
+	        * 修改時間：2016-10-6 09:36:43
+	        * ===================================================
+	        *****************************************************************/
+	    @font-face {
+	        font-family: 'Glyphicons Halflings';
+	        src: url('../fonts/glyphicons-halflings-regular.eot');
+	        src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+	    }
+	    ul,ol{
+	    	list-style: none;
+	    	overflow: hidden;
+	    }
+    
+    
+  

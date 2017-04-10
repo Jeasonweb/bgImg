@@ -1,0 +1,1374 @@
+@charset "utf-8";
+/* ===================================================================
+@set browser style:清除浏览器默认样式
+ ================================= */
+html,body,h1,h2,h3,h4,h5,h6,hr,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,table,tr,th,td,em,a,span{
+         margin:0;
+            padding:0;
+            font-weight:normal;
+            text-shadow:none;
+            box-shadow:none;
+            font-family: "微软雅黑", "黑体";
+}
+html {
+     min-height:100%;
+      background-color:#f0f0f0;
+      border:none;
+}
+body {      
+       width:100%;
+       min-height:100%;
+       color:#333;        
+}
+em{
+     font-style:normal;
+}
+img {
+    border:none;
+    vertical-align:middle;
+}
+ul,ol {
+   list-style-type:none;
+}
+button,input,select,textarea {
+      outline:none;
+}
+button,input,select {
+     vertical-align:middle;
+}
+button,submit {
+     cursor:pointer;
+}
+textarea {
+   resize:none;
+}
+table {
+    border-collapse:collapse;
+}
+a:link,a:visited,a:hover,a:active {
+    text-decoration:none;
+     outline:none;
+     color:#000000;
+     font-weight:normal;
+}
+.clearfix:after {
+     content:" ";
+      display:block;
+      height:0;
+      clear:both;
+      visibility:hidden;
+}
+.clearfix { 
+     *zoom:1;
+}
+.clear{
+   clear:both;
+}
+/********************************************字体样式大小**************************************/
+html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{
+    font-size:85px;
+    -webkit-transition:font-size 0.2s ease-out;
+     -moz-border-transition:font-size 0.2s ease-out;
+}
+@media only screen and (max-width: 2560px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:85px; }}
+@media only screen and (max-width: 1600px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:53px; }}
+@media only screen and (max-width: 1440px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:48px; }}
+@media only screen and (max-width: 1280px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:42.5px; }}
+@media only screen and (max-width: 1080px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:36px; }}
+@media only screen and (max-width: 1024px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:34px; }}
+@media only screen and (max-width: 960px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:32px; }}
+@media only screen and (max-width: 900px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:30px; }}
+@media only screen and (max-width: 800px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:26.5px; }}
+@media only screen and (max-width: 770px) { html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size:25.5px; }}
+@media only screen and (max-width: 720px) {html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size: 24px; }}
+@media only screen and (max-width: 640px) {html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size: 21px; }}
+@media only screen and (max-width: 600px) {html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size: 20px; }}
+@media only screen and (max-width: 560px) {html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size: 18px; }}
+@media only screen and (max-width: 480px) {html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size: 16px; }}
+@media only screen and (max-width: 420px) {html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size: 13.5px; }}
+@media only screen and (max-width: 390px) {html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size: 12.5px; }}
+@media only screen and (max-width: 360px) {html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size: 12px; }}
+@media only screen and (max-width: 320px) {html,body,div,p,dl,dt,dd,ul,ol,li,form,fieldset,button,iput,textarea,select,em,a{ font-size: 10.5px; }}
+/*********************************************基本框架*********************************************/
+/*.ui-bar-h{
+     background-color:#e1276f;
+     width:100%;
+     height:4em;
+     border-width:0;
+     
+}*/
+.ui-bar-h{
+     background-color:#f0f0f0;
+     width:100%;
+     border-width:0;
+     
+}
+.top_bar{
+     background-color:#FFF;
+     height:3.5em;
+     
+}
+.ui-bar-h .top_bar span{
+     color:#333;
+}
+.ui-content{
+     padding:0;
+     position:relative;
+     
+}
+/*********************************************二级导航*********************************************/
+ul.nav_two li{
+     float:left;
+     display:block;
+     width:33.3%;
+     text-align:center;   
+     line-height:3.5em;
+     background-color:#f0f0f0;
+}
+ul.nav_two li.last{
+     border-right:none;
+     
+}
+ul.nav_two li span{  
+     font-size:1.4em;
+     
+}
+ul.nav_two li:hover,ul.nav_two li.cur{
+     background:#FFF;
+     border-bottom:#e1276f 0.2em solid;
+     color:#e1276f;
+     
+}
+/*********************************************对齐*********************************************/
+.text_l{
+     text-align:left;
+     
+}
+.text_c{
+     text-align:center;
+     
+}
+.text_r{
+     text-align:right;
+     
+}
+.left{
+     float:left;
+     
+}
+.right{
+     float:right;
+     
+}
+/*********************************************header基本框架*********************************************/
+.ui-grid-b .ui-block-a, .ui-grid-b .ui-block-b, .ui-grid-b .ui-block-c
+{
+     display:block;
+}
+.ui-grid-b .ui-block-a, .ui-grid-b .ui-block-c {
+     width:15%;
+}
+.ui-grid-b .ui-block-b{
+     width:70%;
+     padding:1em 0;
+     line-height:2em;
+     text-align: center;
+}
+/*********************************************标题*********************************************/
+.title,.title125,.text{
+     display:block;
+     width:100%;          
+}
+.title,.title125{
+     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;   
+}
+.title,.big_15{
+     font-size:1.5em;
+}
+.title125,.big_125{
+     font-size:1.25em;
+     
+}
+.ui-header span{
+     color:#333;
+}
+.text{
+     font-size:1em;
+     
+}
+/*********************************************段落*********************************************/
+p{
+     
+     font-size:1.25em;
+     line-height:2em;
+     text-indent: 2em;
+      letter-spacing:0.1em;
+      padding:1em;
+}
+/*********************************************字体颜色*********************************************/
+.hui{
+     color:#999;
+     
+}
+.hong{
+     color:#e1276f;
+}
+.lan{
+     color:#06F;
+}
+.orange{
+     color:#f39818;
+     
+}
+.green{
+     color:#04b80f;
+}
+/*********************************************背景颜色*********************************************/
+.bg_lan{
+     background-color:#2aabe5;
+     
+}
+.bg_huilan{
+     background-color:#536d88;
+     
+}
+.bg_lv{
+     background-color:#b7d43e;
+     
+}
+.bg_cheng{
+     background-color:#f5c10d;
+     
+}
+.bg_meihong{
+     background-color:#d6496c;
+     
+}
+.bg_zi{
+     background-color:#9178b1;
+     
+}
+.bg_dahong{
+     background-color:#e83030;
+     
+}
+.bg_qing{
+     background-color:#42c4c9;
+     
+}
+/*********************************************按钮*********************************************/
+.ui-btn{
+     font-size:1em;
+     margin:0;
+     padding:0; 
+     border-radius:0;
+     border:none;
+     display:block;       
+}
+.ui-header .ui-btn{
+    font-size:1em;
+     margin:0;
+     padding:1em 0;  
+     border-radius:0;
+     border:none;
+     display:block;
+     box-shadow:none;           
+}
+.ui-header .ui-btn span{
+     height:1.6em;
+     line-height:1.6em;
+     
+}
+.ui-header .ui-btn img{
+     width:2em;
+     margin-left:1em;
+     
+}
+.ui-header .ui-btn:hover{
+     background-color:#cd155d;
+     
+}
+.duan_btn .ui-btn,.chang_btn .ui-btn{
+     margin:1em;
+     padding:0.7em 0;
+     font-family: "微软雅黑", "黑体";
+     font-size:1.5em;
+     background-color:#e1276f;
+     color:#fff;
+     border-radius:0.25em;
+     
+}
+.duan_btn .ui-btn{
+     float:left;
+     margin-right:0;
+     
+}
+.chang_btn .ui-btn{
+     width:90%;
+     
+}
+.small_btn .ui-btn{
+     width:40%;
+     padding:0.15em 0;
+     
+}
+.duan_btn .ui-btn:hover,.chang_btn .ui-btn:hover{
+     background-color:#cd155d;
+}
+.lv_btn .ui-btn
+{
+      background-color:#02ca0f;
+}
+.lv_btn .ui-btn:hover{
+     background-color:#03b20e;
+     
+}
+.huang_btn .ui-btn
+{
+      background-color:#ffce55;
+}
+.huang_btn .ui-btn:hover
+{
+      background-color:#f6bb42;
+}
+.hui_btn .ui-btn{
+     background-color:#e1e4e9;  
+}
+.hui_btn .ui-btn:hover{
+     background-color:#a4a9ae;  
+}
+/*************************************搜索栏  按钮******************************/
+.ui-input-search:after,.ui-icon-delete:after{
+     width:1.5em;
+     height:1.5em;
+     margin-top:-0.75em;
+     background: url(../images/search.png);
+     background-size:cover;
+     opacity:1;
+     
+}
+.ui-icon-delete:after{
+     background: url(../images/delete.png);
+     background-size:cover;
+     
+     }
+.ui-input-search.ui-input-has-clear .ui-btn.ui-input-clear{
+     width:1.5em;
+     height:1.5em;
+     border-radius:0;
+     margin:0;
+     right:1em;
+     margin-top:-0.75em;
+     
+}    
+.ui-input-btn{
+     width:15%;
+     float:right;
+     font-size:1.25em;
+     height:2em;
+     line-height:2em;
+     margin:0.8em 0;
+     border:none;
+     background-color:#e1276f;
+     font-family: "微软雅黑", "黑体";
+     color:#FFF;
+     font-weight:normal;
+     
+}
+.ui-input-btn:hover{
+     background-color:#cd155d;
+}
+/*********************************************长宽数值*********************************************/
+.w_1{
+     width:10%;
+     
+}
+.w_15{
+     width:15%;
+     
+}
+.w_2{
+     width:20%;
+     
+}.w_25{
+     width:25%;
+     
+}
+.w_3{
+     width:30%;
+     
+}
+.w_35{
+     width:35%;
+     
+}
+.w_4{
+     width:40%;
+     
+}
+.w_5{
+     width:50%;
+     
+}
+.w_6{
+      width:60%;
+}
+.w_65{
+      width:65%;
+}
+.w_7{
+      width:70%;
+}
+.w_8{
+      width:80%;
+}
+.w_9{
+     width:90%;
+     }
+.h_2{
+     height:2em;
+     
+}
+.h_25{
+     height:2.5em;
+     
+}
+.h_3{
+     height:3em;
+     
+}
+.l_15{     
+     line-height:1.5em;   
+}
+.l_2{
+     line-height:2em;     
+}
+.l_25{     
+     line-height:2.5em;   
+}
+.l_3{
+     line-height:3em;     
+}
+/*********************************************字体样式*********************************************/
+.chuan{
+     text-decoration:line-through;
+     
+}
+/*********************************************banner*********************************************/
+.banner{
+     width:100%;
+     height:3rem;
+     overflow:hidden;
+     position:relative;
+}
+.banner_index{
+     height:1rem;
+     
+}
+.banner .pic{
+     width:100%;
+     position:absolute;
+     z-index:1;
+     
+}
+.banner .pic img{
+     width:100%;
+     
+}
+.banner .jieshao{
+     display:block;
+     width:100%;
+     min-height:2em;
+     padding:0.5em 1em;
+     position:absolute;
+     z-index:2;
+     bottom:0;
+     background-color:rgba(0,0,0,0.4);
+     color:#FFF;
+}
+.banner_index .jieshao{
+     min-height:1em;
+     
+}
+/*********************************************图标链接*********************************************/
+ul.pic_link{
+     padding-top:2em;
+     padding-left:1em;
+     
+}
+ul.pic_link li{
+     float:left;
+     display:block;
+     width:21.5%;
+     margin-right:1em;
+     margin-bottom:1em;
+     text-align:center;
+}
+ul.pic_link li.last{
+     margin-right:0;
+     
+}
+ul.pic_link li a{
+     text-align:center;
+     display:block;
+     width:4em;
+     height:4em;
+     line-height:4em;
+     border-radius:10em;
+     overflow:hidden;
+     margin:0 1em;
+     
+}
+/*ul.pic_link li a:hover{
+     background-color:#cd115a;
+     
+}*/
+ul.pic_link li a img{
+     width:90%;
+     
+}
+ul.pic_link li span{
+     display:block;
+     padding:0.5em 0;
+     
+}
+/*图标为img*/
+.img_link{
+     width: 100%;
+     margin: 1em auto;
+     height: 100%;
+}
+.item{
+     width: 25%;
+     text-align: center;
+     padding-top:1em;
+     float: left;
+}
+.item a{
+     display: block;
+}
+.item a img{
+     width:4em;
+     height:4em;
+     line-height:4em;
+     border-radius:10em;
+     overflow:hidden;
+     vertical-align: middle;
+}
+.item_text{
+     font-size: 1em;
+     height: 1em;
+     line-height: 1em;
+     padding:1em 0;
+     text-indent: 0.5em;
+     width: 90%;
+}
+/*********************************************商品列表*********************************************/
+ul.sp_list{
+     padding:0 1em;
+     background-color:#fff;          
+}
+ul.sp_list li{
+     padding:1em 0;
+     border-bottom:#CCC 1px solid;
+     background-color:#fff;
+     
+}
+ul.sp_list li span{
+     float:left;
+     display:block;
+     
+}
+ul.sp_list li .pic{
+     width:43%;
+     height:9.5em;
+     overflow:hidden;
+     
+}
+ul.pic_small li .pic{
+     width:30%;
+     height:7em;
+     overflow:hidden;
+     
+}
+ul.sp_list li span.pic img{
+     width:100%;
+     
+}
+ul.sp_list li .right{
+           width:53%;
+     
+}
+ul.pic_small li .right{
+     width:66%;
+     
+}
+ul.sp_list li span.title125{
+     padding:0.35em 0;
+}
+ul.sp_list li span.text{
+     overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+   
+}
+ul.pic_small li span.text{
+     height:1.5em;
+     -webkit-line-clamp: 1;
+     
+     
+}
+/*********************************************商品列表 图片加标题1排2个*********************************************/
+.sp_list_w{
+     border-bottom:#CCC 1px solid;
+     padding:1em;
+     
+}
+.sp_list_w li{
+     float:left;
+     margin-right:1em;
+     
+}
+.sp_list_w li.last{
+     margin-right:0;
+     
+}
+.sp_list_w li .title125{
+     margin-bottom:0.5em;
+     
+}
+.sp_list_w li img{
+     width:100%;
+     
+}
+.pic_w2 li{
+   width:47.5%; 
+}
+.pic_w3 li{
+   width:30.5%; 
+}
+/*********************************************纯文字列表*********************************************/
+ul.text_list li{
+     display:block;
+     padding:1.25em;
+     min-height:1em;
+     border-bottom:#CCC 1px solid;
+     background-color:#FFF;
+     
+}
+.text_list .heng_2x  span{
+     display:inline-block;
+}
+ul.icon_r li.heng_2x:after{
+     top:0.2em;
+}
+ul.text_list li.hang_2p{
+     padding:0.67em 1.25em;
+     
+}
+ul.text_list li:hover{
+     background-color:#fafafa;
+     
+}
+ul.pic_text li img{
+     height:2em;
+     margin-right:1em;
+     
+}
+ul.pic_text3 li img{
+     height:3em;
+     margin-right:1em;
+     
+}
+ul.pic_text4 li img{
+     height:4em;
+     margin-right:1em;    
+}
+ul.pic_text li span,ul.pic_text3 li span{
+     display:inline-block;
+     vertical-align:middle;
+}
+/*********************************************图标*********************************************/
+ul.icon_r li:after,.link span:after{
+       content: "";
+      position:relative;
+       float:right;
+      display: block;
+       width:1.25em;
+       height:1.25em;
+       background:url(../images/arrow_r.png);
+       background-repeat:no-repeat; 
+       background-size:100% 100%;
+       right:0;
+       top:-1.25em;
+}
+ul.icon_down li:after{
+    content: "";
+    position:relative;
+    float:right;
+    display: block;
+    width:1.25em;
+    height:1.25em;
+    background: url(../images/download.png);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    right:0;
+    top:-1.25em;
+}
+.icon_down span:after{
+    top:0.15em;
+}
+.link span:after{
+     top:0.2em;
+     
+}
+ul.pic_text li:after{
+     top:0.25em;
+     
+}
+ul.pic_text3 li:after{
+     top:0.8em;
+     
+}
+.icon_r span:after{
+     top:0.15em;
+     
+}
+/************************************表格样式**********************************/
+table{
+     margin:1em;
+     width:93.3%;
+     text-align:center;
+     font-size:1em;  
+     text-shadow:none;
+     background-color:#FFF;
+     font-family: "微软雅黑", "黑体";
+}
+thead{
+     background-color:#f0f0f0;
+}
+td{
+     padding:0.5em 0;
+     border:#ddd 1px solid;
+     
+}
+/************************************表单样式**********************************/
+/*************************************搜索栏******************************/
+.hang,.hang_line{
+     display:block;
+     width:93%;
+     background-color:#f0f0f0;
+     padding:0 1em;
+     
+}
+.ui-input-search{
+     float:left;
+     display:block;
+     width:60%;
+    height:2.5em;
+     margin:1em 0;
+     border-radius:0.5em;
+     background-color:#FFF;
+     border:none;
+     padding-right:3em;
+     
+}
+.ui-input-search input{
+       font-size:1.25em;
+       min-height:1em;
+       padding:0.3em 0;
+       padding-left:2em;
+       font-family: "微软雅黑", "黑体";
+     
+     
+}
+.ui-btn-icon-right:after{
+     right:0.1em;
+     
+}
+.full .ui-input-search{
+     width:90%;
+  
+}
+.full_7    .ui-input-search{
+     width:70%;
+     
+}
+/*************************************输入框******************************/ 
+.hang_line{
+     background-color:#FFF;
+     border-bottom:#CCC 1px solid;
+     
+}    
+     
+.ui-mobile label,.ui-input-text input{
+     float:left;
+     width:20%;
+     font-size:1.25em;
+     padding:1em 0;
+     margin:0;
+     min-height:1.5em;
+     line-height:1.5em;
+     font-family: "微软雅黑", "黑体";
+     
+}    
+.ui-input-text{
+     border:none;
+     margin:0;
+     
+}    
+.ui-input-text input{
+     width:70%;
+     border-radius:0;
+     
+}    
+.hang_line .ui-link{
+     float:right;
+     display:block;
+     width:2em;
+     height:2em;
+     margin:1.1em 0; 
+}    
+.hang_line .ui-link img{
+     width:100%;     
+}    
+/*************************************CheckBox******************************/
+.CheckBox label,.Radio label{
+     width:90%;
+     margin-left:0.5em;
+     
+}
+.ui-checkbox,.ui-radio{
+     float:left;
+}
+.ui-radio{
+     padding:0;
+     
+}
+.ui-checkbox input,.ui-radio input{
+    border: 0px solid;
+     position:relative;
+     width:1.5em;
+     height:1.5em;
+     left:0;
+     margin:0;
+     margin-top:0.8em;
+     -webkit-appearance: none;
+     
+}
+.ui-checkbox input{
+     background:url(../images/checkbox_bg.png);
+     background-size:100% 100%;
+}
+.ui-checkbox input:checked{
+     background:url(../images/checkbox_bg_t.png);
+     background-size:100% 100%;
+     
+}
+.ui-radio input{
+     background:url(../images/radio_bg.png);
+     background-size:100% 100%;
+     
+}
+.ui-radio input:checked{
+     background:url(../images/radio_bg_t.png);
+     background-size:100% 100%;
+     
+}
+ul.sp_list .ui-checkbox input{
+     margin-top:3.3em;
+     
+}
+ul.pic_small .ui-checkbox input{
+     margin-top:2.3em;
+     
+}
+ul.sp_list label{
+     padding:0; 
+}
+ul.sp_list li label .pic{
+     width:45%;
+     height:7.3em;
+     
+}
+ul.sp_list li label .right{
+     width:51%;
+     
+}
+ul.pic_small li label .pic{
+     width:32%;
+     height:5.6em;
+     
+}
+ul.pic_small li label .right{
+     width:64%;
+     
+}
+.list{
+     display:block;
+     width:100%;
+     border-bottom:#CCC 1px solid;
+     
+}
+.list label{
+     width:75%;
+     text-align:left;
+     padding:0.5em 1em;
+     
+     
+}
+.list label img{
+     height:3em;
+     margin-right:1em;
+     
+}
+/*************************************select******************************/
+.ui-select{
+     float:left;
+     display:block;
+     margin:1em 0;
+     width:20%;
+     margin-right:1em;
+     
+}
+.hang_line  .ui-select{
+     width:80%;
+     margin:0;
+     padding:1em 0;
+     font-size:1.25em;
+}
+.ui-select .ui-btn{
+     height:2.5em;
+     line-height:2.5em;
+     box-shadow:none;
+     
+}
+.hang_line .ui-select .ui-btn{
+     height:1.5em;
+     line-height:1.5em;
+     
+     }
+.ui-select .ui-btn span{
+     font-size:1.25em;
+     text-align:left;
+     
+     
+}
+.hang_line .ui-select .ui-btn span{
+     font-size:1em;
+     
+     }
+.ui-icon-carat-d:after{
+     background:url(../images/arrow_d.png)50% 30% no-repeat ;
+     width:1.5em;
+     height:1.5em;
+     background-size:60% 60%;
+}
+.hang_line .ui-icon-carat-d:after{
+     background-size:100% 100%;
+     
+     
+     }
+/*************************************弹出框******************************/
+.dckuang_hei,.dckuang_hei_s{
+     position:fixed;
+     z-index:100;    
+     background-color:rgba(0,0,0,0.5);
+}
+.dckuang_hei{
+     top:0;
+     left:0;
+     width:100%;
+     height:100%;    
+}
+.dckuang_hei_s{
+     width:30%;
+     height:18%;
+     top:30%;
+     left:35%;
+     border-radius:1em;
+     
+}
+.mima,.yhk_k{
+     display:block;
+     width:80%;      
+     position:absolute;
+     top:40%;
+     left:10%;
+     margin-top:-6.5em;
+     font-family: "微软雅黑", "黑体";
+     text-align:center;
+     color:#000;
+     background-color:#FFF;          
+     }
+.mima{
+     min-height:13em;
+     padding:1em 0;
+}
+.yhk_k{
+     min-height:6em;
+     
+}
+.mima .title{
+     padding-bottom:0.65em;
+     border-bottom:#CCC 1px solid;
+     
+}
+.yhk_k .title{
+     padding:0.7em 0;
+     border-bottom:#CCC 1px solid;
+}
+.mima .password{
+     display:block;
+     width:89.5%;
+     margin:1em;
+     margin-bottom:0;
+     
+     /*background:url(../images/password.jpg);
+     background-size:100% 100%;*/
+     
+}
+.mima .password input{
+     border:#CCC 1px solid;
+     width:100%;
+     font-size:2em;
+     padding:0.25em 0;
+     /*letter-spacing:1.2em;    
+     margin-left:8%;*/
+     
+}
+.btn_cg:hover{
+     background-color:rgba(0,0,0,0.7);
+}
+.btn_cg .ui-link{
+     display:block;
+     width:100%;
+     height:100%;
+     color:#FFF;
+     text-align:center;
+     background:url(../images/gou.png) 50% 30% no-repeat;
+     background-size:50% 50%;
+}
+.btn_cg .ui-link span{
+     padding-top:65%;
+     
+}
+.yhk_k .hang_line{
+     width:90%;
+     
+}
+.yhk_k .Radio label{
+     width:85%;
+     
+}
+.list .ui-radio input {
+     margin-top:1.6em;
+     
+}
+.jiesuan a{
+     width:25%;
+     float:right;
+     display:block;
+     height:3.5em;
+     line-height:3.5em;
+     background-color:#ffce55;
+     text-align:center;
+     
+}
+.jiesuan a:hover{
+     background-color:#f6bb42;
+     
+}
+.jiesuan a span{
+     font-size:1.5em;
+     color:#FFF;
+     
+}
+.jiesuan span{
+     display:inline-block;
+     font-size:1.25em;
+     
+     }
+.jiesuan span em{
+     font-size:1em;
+     
+     }
+/*modify：lina*/
+.list_k2 .list{
+     border-bottom: none;
+}
+.list_k2 p{
+     line-height: 1.5em;
+     padding: 1em;
+     font-size: 1.25em;
+     text-align: left;
+}
+/*********************************************评价样式*********************************************/
+ul.pingjia li{
+     padding:1em;
+     background-color:#fafafa;
+     border-bottom:#CCC 1px solid;
+     
+}          
+ul.pingjia li span{
+     float:left;
+     display:block;
+     height:2em;
+     line-height:2em;
+     
+}
+ul.pingjia li span.title125{
+     font-size:1em;
+     font-weight:bold;
+     
+     }    
+ul.pingjia li span.xing{
+     float:right;
+     
+}    
+ul.pingjia li span.xing img{
+     height:1.25em;
+     
+}
+ul.pingjia li p{
+     float:left;
+     display:block;
+     
+     }
+ul.pingjia li p.text{
+     margin:1em 0;
+     padding:0;
+     min-height:1em;
+     overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+     
+}    
+ul.pingjia li .pic li{
+     display:block;
+     border-bottom:none;
+     float:left;
+     width:31%;
+     height:7.8em;
+     overflow:hidden;
+     padding:0;
+     margin-right:0.5em;
+     margin-bottom:0.5em;
+     
+}
+ul.pingjia li .pic li.last{
+     margin-right:0;
+     
+}
+ul.pingjia li .pic li.heng img{
+     height:100%;
+     margin-left:-10%;
+     
+}
+ul.pingjia li .pic li.shu img{
+     width:100%;
+     margin-top:-1.25em;
+     
+}
+.jiesuan  .ui-checkbox{
+     margin:0 1em;
+     
+}
+.jiesuan  .ui-checkbox input{
+     margin-top:1em;
+     
+}
+.jiesuan label{
+     font-size:1.5em;
+     width:10%;
+     height:2.33em;
+     line-height:2.33em;
+     padding:0;
+     padding-right:1em;
+     
+}
+.jiesuan .xiao{
+     font-size:1em;
+     
+}
+.jiesuan a{
+     margin-top:-1.5em;
+}
+/*********************************************商品加减样式*********************************************/
+.num .ui-input-btn,.num .ui-input-text{
+     float:left;
+     
+}
+.num .ui-input-btn{
+     font-size:2.5em;
+     line-height:1em;
+     width:1em;
+     height:1em;
+     padding:0;
+     margin:0;
+     margin-top:0.5em;
+     border-radius:0.1em;
+     font-family:sans-serif;
+     
+}
+.num .ui-input-text{
+     width:3em;
+     box-shadow:none;
+     border-bottom:#F00 2px solid;
+     margin:1.1em 0.5em;
+     margin-bottom:0;
+     border-radius:0.2em;
+     
+}
+.num .ui-input-text input{
+     width:100%;
+     text-align:center;
+     font-size:1.5em;
+     padding:0;
+     padding-top:0.3em;
+     
+}
+/*********************************************footer样式*********************************************/  
+.ui-bar-i,.bottom_bar{
+     background-color:#fafafa;
+     border:0;
+     width:100%;
+     z-index:200;
+     
+}    
+.bottom_bar{
+     height:3.5em;
+     background-color:#f0f0f0;
+     z-index:100;
+     
+}
+.ui-footer .ui-navbar li .ui-btn{
+     font-size:1em;
+     padding:0.5em;
+     
+}
+.ui-footer .ui-navbar li .ui-btn:hover{
+     background-color:#f0f0f0;
+     
+}
+.navBar li a img{
+     height:3em;
+     
+}
+/*********************************************日期选择样式*********************************************/  
+.timeselect{
+     padding:0 1em;
+     border-bottom:#ccc 1px solid;
+     
+}
+.timeselect .ui-input-text input{
+     width:45%; 
+     font-size:1.2em;
+     text-align:center;
+     
+}
+.timeselect span{
+     float:left;
+     width:10%;
+     font-size:2em;
+     text-align:center;
+     line-height:2em;
+     
+     
+}
+::-webkit-datetime-edit{  width:100%;}
+::-webkit-datetime-edit-fields-wrapper{ width:100%; text-align:center;}
+::-webkit-clear-button { -webkit-appearance: none; width:0;}
+::-webkit-datetime-edit-text { padding: 0.1em; }
+::-webkit-inner-spin-button { visibility: hidden; -webkit-appearance: none;  width:0;}
+::-webkit-calendar-picker-indicator {
+     width:1em;
+    background-color:transparent;
+    color: #999;
+}
+.top_bar_fit{
+     position:fixed;
+     z-index:100;
+     background-color:#f0f0f0;
+     
+     
+}
+.neirong{
+     position:inherit;
+           }
+           
+           
+           
+.yhq_list li{
+     float:left;
+     display:block;
+     width:44%;
+     height:5.5em;
+     background:url(../images/youhuiq.jpg) 0 0 no-repeat;
+     background-size:contain;
+     margin:4%;
+     margin-right:0;
+     
+     }          
+           
+.yhq_list li span{
+     /*float:left;*/
+     display:block;  
+     color:#fff;
+     font-size:0.8em;
+}    
+.yhq_list li span.left{
+     width:33%;
+     height:100%;
+     text-align:center;
+     /*line-height:6.8em;*/
+     margin:1em 0 0 0;
+     
+     }
+.yhq_list li span.left em{
+     font-size:3em;
+     
+     }    
+                           
+     .yhq_list li span.p1{
+           /*margin-top:2em;*/
+           margin-top:1.5em;
+           
+           }
+           
+.tishi{ border:1px solid #e1276f;
+     min-height:1.5em;
+     line-height:1.5em;
+     margin:1em;
+     padding:0.5em;
+     background:#fff;
+     color:#e1276f;
+     }          
+           
+           
+           
+.ui-btn-icon-notext:after, .ui-btn-icon-left:after, .ui-btn-icon-right:after{
+     margin-top: -0.8em;
+     
+}          
+           
+ul.pic_twolink{
+     display:block;
+     width:100%;
+     height:6.67em;
+     background:#970209 url(../images/liuliangdaie.jpg) no-repeat 0 0;
+     background-size:contain;
+}
+ul.pic_twolink li a{
+     display:block;
+     width:42%;
+     height:6.67em;  
+}
+     
+           
