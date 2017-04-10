@@ -1,0 +1,21 @@
+{
+  "name": "bgimg",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-webserver": "^0.9.1",
+    "imagemin-pngquant": "^5.0.0"
+  }
+}

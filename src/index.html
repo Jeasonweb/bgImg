@@ -1,0 +1,54 @@
+<!--
+	作者：Jeason_zhang888@163.com
+	时间：2017年4月10日14:03:17
+	描述：背景图片
+-->
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>背景</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/JoynBackground.css"/>
+	<style>
+		#zhushi
+		{ background-image: url(del.png);
+		 text-align: center;
+		  margin: 300px auto; 
+		  padding: 20px; 
+		  width: 60%; 
+		  border-radius: 30px; }
+	</style>
+	
+	
+	
+	</head>
+	<body>
+		<div id="zhushi">
+		    <h1>简易背景</h1>
+		    <br/><br/>
+		    <p>超简单的背景动画文件，代码就一句，JoynBackground(您需要的效果，速度);</p><br/>
+		    <p>只需把图片放在下边的Div中，就可按照您向要的方式展示您的图片。</p><br/>
+		    <p>效果包含拉近，拉远，切换……</p><br/>
+			<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p><br/>
+		
+		</div>
+		<!-- 背景[就这么简单] -->
+		<div id="JoynBackground">
+			<img src="img/1.jpg" name="1"/>
+		    <img src="img/2.jpg" name="2"/>
+		    <img src="img/3.jpg" name="3"/>
+		</div>
+	
+	
+	</body>
+</html>
+<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/JoynBackground.js"></script>
+<script>
+$(document).ready(function(){
+	JoynBackground(2,10000); //场景动画类型和时间
+	/* 场景动画类型：【1】拉近【2】拉远【3】幻灯片显示 */
+})
+</script>
